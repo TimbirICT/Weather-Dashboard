@@ -1,0 +1,30 @@
+:root {
+    --grey: #555758;
+    --black: #000000;
+    --fall: #f6bd6d;
+    --light: #fffaf7;
+  }
+  
+  
+  .custom-navbar .navbar-nav .custom-nav-link {
+    font-size: 1.5rem;
+    color: var(--fall);
+  }
+  
+
+  .hero {
+    background-color: var(--fall);
+    color: var(--black);
+  }
+  
+  .custom-btn {
+    background-color: var(--grey);
+    color: var(--light);
+  }
+  
+  .custom-btn:hover {
+    background-color: var(--light);
+    color: var(--grey);
+  }
+  
+
