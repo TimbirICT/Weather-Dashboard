@@ -26,5 +26,26 @@
     background-color: var(--light);
     color: var(--grey);
   }
+
+  h2 {
+    text-align: center;
+  }
+
+  .forecast-box {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+  }
+  
+  .current-forecast-box {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    background-color: yellow;
+    color: black;
+    font-size: 20px; /* Adjust the font size as needed */
+  }
   
 
