@@ -15,12 +15,21 @@
   .hero {
     background-color: var(--fall);
     color: var(--black);
+    text-align: center;
+    height: 200px;
     
+  }
+
+  input {
+    padding: auto;
+    margin: 7px;
   }
   
   .custom-btn {
     background-color: var(--grey);
     color: var(--light);
+    border-radius: 5px;
+
   }
   
   .custom-btn:hover {
@@ -38,6 +47,7 @@
 }
 
 .forecast-box {
+  display: inline-;
   background-color: yellow;
   color: black;
   font-size: 15px;
