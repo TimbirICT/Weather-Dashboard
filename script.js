@@ -52,17 +52,20 @@ function displayWeatherForecast(data) {
 
   const currentTemperature = currentForecast.main.temp;
   const currentDescription = currentForecast.weather[0].description;
-  const currentWeatherIcon = currentForecast.weather[0].icon;
+  const currentWindSpeed = currentForecast.wind.speed;
+  const currentHumidity = currentForecast.main.humidity;
 
   const currentForecastBox = document.createElement("div");
   currentForecastBox.classList.add("current-forecast-box");
   currentForecastBox.innerHTML = `
     <div class="current-date">${currentDay}</div>
     <div class="current-icon">
-      <img src="https://openweathermap.org/img/w/${currentWeatherIcon}.png" alt="Weather Icon">
+      <img src="https://openweathermap.org/img/w/${currentForecast.weather[0].icon}.png" alt="Weather Icon">
     </div>
     <div class="current-temperature">Temperature: ${Math.round(currentTemperature - 273.15)}°C</div>
     <div class="current-description">Description: ${currentDescription}</div>
+    <div class="current-wind-speed">Wind Speed: ${currentWindSpeed} m/s</div>
+    <div class="current-humidity">Humidity: ${currentHumidity}%</div>
   `;
 
   forecastDataElement.appendChild(currentForecastBox);
@@ -75,7 +78,8 @@ function displayWeatherForecast(data) {
 
       const temperature = firstForecast.main.temp;
       const description = firstForecast.weather[0].description;
-      const weatherIcon = firstForecast.weather[0].icon;
+      const windSpeed = firstForecast.wind.speed;
+      const humidity = firstForecast.main.humidity;
 
       // Create a box for the day with the required information
       const forecastItem = document.createElement("div");
@@ -83,16 +87,20 @@ function displayWeatherForecast(data) {
       forecastItem.innerHTML = `
         <div class="date">${day}</div>
         <div class="icon">
-          <img src="https://openweathermap.org/img/w/${weatherIcon}.png" alt="Weather Icon">
+          <img src="https://openweathermap.org/img/w/${firstForecast.weather[0].icon}.png" alt="Weather Icon">
         </div>
         <div class="temperature">Temperature: ${Math.round(temperature - 273.15)}°C</div>
         <div class="description">Description: ${description}</div>
+        <div class="wind-speed">Wind Speed: ${windSpeed} m/s</div>
+        <div class="humidity">Humidity: ${humidity}%</div>
       `;
 
       forecastDataElement.appendChild(forecastItem);
     }
   }
 }
+
+
 
 // Call fetchWeatherForecast with the cityName from the URL
 const urlParams = new URLSearchParams(window.location.search);

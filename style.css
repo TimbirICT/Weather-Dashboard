@@ -15,6 +15,7 @@
   .hero {
     background-color: var(--fall);
     color: var(--black);
+    
   }
   
   .custom-btn {
@@ -31,21 +32,35 @@
     text-align: center;
   }
 
-  .forecast-box {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px;
-    background-color: yellow;
-    color: black;
-  }
-  
-  .current-forecast-box {
-    display: block;
-    margin: 10px;
-    padding: 10px;
-    background-color: yellow;
-    color: black;
-    font-size: 20px; /* Adjust the font size as needed */
-  }
-  
+  /* Add CSS styles for centering the forecast boxes */
+.row.justify-content-center {
+  text-align: center;
+}
 
+.forecast-box {
+  background-color: yellow;
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  width: 200px;
+  padding: 20px; /* Add more padding for better spacing */
+  margin: 10px auto; /* Center horizontally */
+  border-radius: 10px;
+}
+
+.current-forecast-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: yellow;
+  color: black;
+  font-size: 15px; /* Adjust the font size as needed */
+  text-align: center;
+  width: 666px; /* Adjust the width as needed */
+  height: 250px; /* Adjust the height as needed */
+  margin: auto; /* Center horizontally */
+  position: relative; /* Position the box absolutely */
+  
+}
