@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const currentDate = new Date();
-        const currentDay = currentDate.toDateString();
+        const currentDay = currentDate.toDateString(); 
 
         if (days[currentDay]) {
             const currentForecast = days[currentDay][0];
