@@ -11,6 +11,9 @@
     color: var(--fall);
   }
   
+  section {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 
   .hero {
     background-color: var(--fall);
@@ -50,6 +53,7 @@
   display: inline-;
   background-color: yellow;
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-align: center;
   width: 200px;
@@ -66,6 +70,7 @@
   border-radius: 10px;
   background-color: yellow;
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 15px; /* Adjust the font size as needed */
   text-align: center;
   width: 666px; /* Adjust the width as needed */
