@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cityNameInput = document.getElementById("5day");
+    const cityNameDisplay = document.getElementById("city-name");
     const previousSearchesElement = document.getElementById("previous-searches");
 
     const addSearchToPrevious = (search) => {
@@ -28,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updatePreviousSearchButtons() {
         const previousSearches = JSON.parse(localStorage.getItem("previous-searches")) || [];
-        // Clear any existing buttons
         while (previousSearchesElement.firstChild) {
             previousSearchesElement.removeChild(previousSearchesElement.firstChild);
         }
@@ -70,6 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const forecastDataElement = document.getElementById("forecast-data");
         const forecastList = data.list;
         forecastDataElement.innerHTML = "";
+
+        // Display the city name at the top
+        cityNameDisplay.textContent = data.city.name;
+
         const days = {};
 
         forecastList.forEach((forecast) => {
@@ -84,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentDate = new Date();
         const currentDay = currentDate.toDateString();
 
-        if (days[currentDay]) { // Check if data exists for the current day
+        if (days[currentDay]) {
             const currentForecast = days[currentDay][0];
             const currentTemperature = (currentForecast.main.temp - 273.15) * 9/5 + 32;
             const currentDescription = currentForecast.weather[0].description;
